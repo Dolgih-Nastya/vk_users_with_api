@@ -2,6 +2,7 @@ class FileWriter
 
   def initialize (f_name)
     @file_name=f_name
+    File.delete(@file_name) if File.exists?(@file_name)
   end
 
   def write (user)
